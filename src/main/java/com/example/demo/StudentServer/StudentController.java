@@ -17,7 +17,7 @@ public class StudentController {
     public ResponseEntity<Student> storeStudent(@RequestBody Student student) {
         Student result = studentService.studentValidate(student);
         if(result == null){
-            ResponseEntity.status(400).body(result);
+            return ResponseEntity.status(400).body(result);
         }
         return ResponseEntity.status(201).body(result);
     }
