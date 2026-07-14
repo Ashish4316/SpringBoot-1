@@ -1,15 +1,10 @@
 package com.example.demo.StudentServer;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 
-@Entity
 public class Student {
 
-
-    @Id
-    long ID;
+    int ID;
     String name;
     int age;
     String department;
@@ -33,11 +28,11 @@ public class Student {
     public String getDepartment() {
         return department;
     }
-    public long getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(long ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 
