@@ -1,9 +1,12 @@
 package com.example.demo.StudentServer;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
 public class Student {
-
+    @Id
     int ID;
     String name;
     int age;
