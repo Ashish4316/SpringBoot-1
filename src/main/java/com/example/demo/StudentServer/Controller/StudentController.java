@@ -27,13 +27,12 @@ public class StudentController {
         return  ResponseEntity.status(201).body(result);
     }
     @GetMapping("/getStudent/{id}")
-    public ResponseEntity<?> getStudentById(@PathVariable int id){
-
+    public ResponseEntity<?> getStudentById(@PathVariable int id) throws Exception{
         Student student = studentService.getStudentById(id);
 
-        if(student == null){
-            return ResponseEntity.status(404).body("Student not found");
-        }
+//        if(student == null){
+//            return ResponseEntity.status(404).body("Student not found");
+//        }
 
         return ResponseEntity.ok(student);
     }
