@@ -26,7 +26,7 @@ public class StudentService {
         return mapToResponseDTO(student);
     }
 
-    public Student getStudentById(int id) throws Exception{
+    public Student getStudentById(int id){
         Optional<Student> student = studentRepository.findById(id);
         return student.get();
     }
